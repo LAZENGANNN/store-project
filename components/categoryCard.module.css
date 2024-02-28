@@ -1,0 +1,34 @@
+
+.container {
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    max-width: fit-content;
+
+}
+
+.imgDiv{
+    max-width: 200px;
+    max-height: 200px;
+    background: black;
+    border-radius: 10px;
+}
+
+
+
+.image{
+    max-width: 200px;
+    max-height: 200px;
+    opacity: 80%;
+    border-radius: 10px;
+}
+
+.image:hover{
+    opacity: 100%;
+}
+
+.name {
+    font-family: "Anta", sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
