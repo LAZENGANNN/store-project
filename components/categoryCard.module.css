@@ -3,7 +3,8 @@
     border: 2px solid darkgray;
     border-radius: 10px;
     max-width: fit-content;
-
+    margin: 0;
+    padding: 0;
 }
 
 .imgDiv{

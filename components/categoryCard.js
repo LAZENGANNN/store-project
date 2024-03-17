@@ -1,9 +1,12 @@
 import styles from './categoryCard.module.css'
+import {button} from "./button";
+
+
 
 export const categoryCard = category =>{
-    const div = document.createElement('div')
-    div.classList.add('categoryCard')
-    div.classList.add(styles.container)
+    const btn  = button(null, ()=> window.location.pathname = `${category}`)
+    btn.classList.add('categoryCard')
+    btn.classList.add(styles.container)
     
     
     const img = document.createElement('img')
@@ -18,6 +21,6 @@ export const categoryCard = category =>{
     name.classList.add(styles.name)
 
 
-    div.append(imgDiv, name)
-    return div
+    btn.append(imgDiv, name)
+    return btn
 }
