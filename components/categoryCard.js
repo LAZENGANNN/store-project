@@ -4,7 +4,7 @@ import {button} from "./button";
 
 
 export const categoryCard = category =>{
-    const btn  = button(null, ()=> window.location.pathname = `${category}`)
+    const btn  = button(null, ()=> window.location.pathname = `${category.name}`)
     btn.classList.add('categoryCard')
     btn.classList.add(styles.container)
     

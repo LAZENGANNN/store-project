@@ -1,7 +1,7 @@
 .container{
     border: 1px solid black;
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    height: 400px;
     background:#d1ffff;
     font-family: "Anta", sans-serif;
     font-size: large;
@@ -12,8 +12,10 @@
 }
 
 .imgDiv{
-    max-width: 200px;
+
+    max-width: 100%;
     max-height: 200px;
+    background: white;
 
 }
 
