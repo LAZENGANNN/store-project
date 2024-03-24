@@ -7,7 +7,7 @@ import {productCard} from "../components/productCard";
 export const categoryPage = (category) =>{
     const div = document.createElement('div');
     div.classList.add(styles.container)
-    getProducts(`products/category/jewelery`)
+    getProducts(`products?category=${category}`)
         .then(
             data =>data.data.map(product => div.append(productCard(product)))
         )

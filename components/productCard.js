@@ -1,6 +1,5 @@
 import styles from './productCard.module.css'
-
-
+import {button} from "./button";
 
 
 export const productCard = product =>{
@@ -21,14 +20,22 @@ export const productCard = product =>{
 
 
     const price = document.createElement('p')
-    price.innerText = `${product.price}`
+    price.innerText = `${product.price}$`
+    price.classList.add(styles.price)
 
 
-    const category = document.createElement('p')
-    category.innerText = product.category
+    // const category = document.createElement('p')
+    // category.innerText = product.category
+    const buttonDiv = document.createElement('div')
 
 
-    div.append(title,imgDiv,price,category)
+
+    const buyButton = button('в корзину', null)
+    buyButton.classList.add(styles.buyButton)
+    buttonDiv.append(buyButton)
+    buttonDiv.classList.add(styles.buttonDiv)
+
+    div.append(title,imgDiv,price,buttonDiv)
     return div
 }
 

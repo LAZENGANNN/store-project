@@ -7,7 +7,6 @@ import {getLayout} from "./features/layaout";
 
 const app = document.querySelector('#app');
 
-
 app.classList.add('app');
 app.append(getHeader());
 app.append(getLayout());
