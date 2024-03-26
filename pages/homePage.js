@@ -11,7 +11,7 @@ export const homePage = () => {
 
     getCategories('categories')
         .then(
-            data =>data.data.map(category => categoriesDiv.append(categoryCard(category)))
+            data=>data.data.map(category => categoriesDiv.append(categoryCard(category)))
         )
 
 

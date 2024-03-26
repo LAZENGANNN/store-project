@@ -49,7 +49,6 @@
     justify-content: flex-end;
 }
 .buyButton:active{
-    transform: scale(1.5);
     background-color: dodgerblue;
 }
 

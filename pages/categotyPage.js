@@ -11,8 +11,5 @@ export const categoryPage = (category) =>{
         .then(
             data =>data.data.map(product => div.append(productCard(product)))
         )
-        .then(
-            data => console.log(data)
-        )
     return div
 }

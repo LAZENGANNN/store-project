@@ -18,7 +18,7 @@ export const getHeader = () => {
 
 
         const name = document.createElement('p');
-        name.innerText = 'Shop name'
+        name.innerText = 'Digital Store'
         buttonLogo.append(getLogo(), name)
     //
     // homeButton.append(divLogo)
