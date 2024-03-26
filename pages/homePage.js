@@ -11,17 +11,9 @@ export const homePage = () => {
 
     getCategories('categories')
         .then(
-            data=>data.data.map(category => categoriesDiv.append(categoryCard(category)))
+            data => data.data.map(category => categoriesDiv.append(categoryCard(category)))
         )
 
-
-    const allProductsButton = button('все продукты', ()=> window.location.pathname = '/products')
-
-
-
-
-
-
-    div.append(categoriesDiv, allProductsButton)
+    div.append(categoriesDiv)
     return div;
 };

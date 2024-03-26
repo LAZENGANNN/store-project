@@ -1,6 +1,7 @@
 import {homePage} from "../pages/homePage";
 import {allProductsPage} from "../pages/allProductsPage";
 import {categoryPage} from "../pages/categotyPage";
+import {getProductPage} from "../pages/productPage";
 
 
 const slicePathname = (pathname, number) =>{
@@ -26,6 +27,9 @@ export const getLayout = () => {
     }
     else if (prePathname === 'category') {
         div.append(categoryPage(pastPathname));
+    }
+    else if (prePathname === 'product'){
+        div.append(getProductPage(pastPathname));
     }
     else {
         // Обработка неизвестного пути

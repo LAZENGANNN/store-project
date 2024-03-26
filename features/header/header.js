@@ -1,30 +1,23 @@
 import {getLogo} from "../../components/logo";
 import {button} from "../../components/button";
-import './headerStyle.css'
+import styles from './headerStyle.module.css'
 
 
 export const getHeader = () => {
-
-
-
-
-
     const header = document.createElement('header');
-    header.classList.add('header');
+    header.classList.add(styles.header);
 
     const buttonLogo = button(null, ()=> window.location.pathname = '/')
-    buttonLogo.classList.add('divLogo')
+    buttonLogo.classList.add(styles.divLogo)
+
+    const name = document.createElement('p');
+    name.innerText = 'Digital Store'
+    buttonLogo.append(getLogo(), name)
 
 
+    const allProductsButton = button('Все продукты', () => window.location.pathname = 'products')
+    allProductsButton.classList.add(styles.allProductsButton)
 
-        const name = document.createElement('p');
-        name.innerText = 'Digital Store'
-        buttonLogo.append(getLogo(), name)
-    //
-    // homeButton.append(divLogo)
-    // header.append(homeButton);
-    header.append(buttonLogo);
-    // //header.append(getLogo());
-
+    header.append(buttonLogo, allProductsButton);
     return header;
 };

@@ -32,8 +32,12 @@ export const productCard = product =>{
 
     const buyButton = button('в корзину', null)
     buyButton.classList.add(styles.buyButton)
-    buttonDiv.append(buyButton)
     buttonDiv.classList.add(styles.buttonDiv)
+
+    const showButton = button('посмотреть', ()=> window.location.pathname = `product/${product.id}`)
+    showButton.classList.add(styles.buyButton)
+    buttonDiv.append(buyButton, showButton)
+
 
     div.append(title,imgDiv,price,buttonDiv)
     return div
