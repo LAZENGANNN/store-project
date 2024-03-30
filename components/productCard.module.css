@@ -45,10 +45,9 @@
     border-radius: 10px;
     border: none;
     font-size: x-large;
-    padding-top: 10px;
-    padding-bottom: 10px;
     justify-content: flex-end;
     margin-top: 10px;
+    padding: 10px;
 }
 .buyButton:active{
     background-color: dodgerblue;

@@ -8,11 +8,14 @@ export const getHeader = () => {
     header.classList.add(styles.header);
 
     const buttonLogo = button(null, ()=> window.location.pathname = '/')
-    buttonLogo.classList.add(styles.divLogo)
+    buttonLogo.classList.add(styles.buttonLogo)
+
+    const logo = getLogo()
+    logo.classList.add(styles.logo)
 
     const name = document.createElement('p');
     name.innerText = 'Digital Store'
-    buttonLogo.append(getLogo(), name)
+    buttonLogo.append(logo, name)
 
 
     const allProductsButton = button('Все продукты', () => window.location.pathname = 'products')

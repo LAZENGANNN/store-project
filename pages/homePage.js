@@ -5,7 +5,8 @@ import styles from './homePage.module.css'
 
 export const homePage = () => {
     const div = document.createElement('div');
-    
+    div.classList.add(styles.container)
+
     const categoriesDiv = document.createElement('div')
     categoriesDiv.classList.add(styles.categoriesDiv)
 
