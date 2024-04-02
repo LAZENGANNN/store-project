@@ -2,6 +2,7 @@ import {homePage} from "../pages/homePage";
 import {allProductsPage} from "../pages/allProductsPage";
 import {categoryPage} from "../pages/categotyPage";
 import {getProductPage} from "../pages/productPage";
+import {getCartPage} from "../pages/cartPage";
 
 
 const slicePathname = (pathname, number) =>{
@@ -31,10 +32,14 @@ export const getLayout = () => {
     else if (prePathname === 'product'){
         div.append(getProductPage(pastPathname));
     }
+    else if (prePathname === 'cart'){
+        div.append(getCartPage());
+    }
     else {
         // Обработка неизвестного пути
         alert('неизвестный путь');
     }
+
 
     return div;
 }

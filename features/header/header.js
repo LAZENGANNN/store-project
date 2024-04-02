@@ -17,10 +17,14 @@ export const getHeader = () => {
     name.innerText = 'Digital Store'
     buttonLogo.append(logo, name)
 
-
+    const buttonDiv = document.createElement('div')
+    buttonDiv.classList.add(styles.buttonDiv)
     const allProductsButton = button('Все продукты', () => window.location.pathname = 'products')
     allProductsButton.classList.add(styles.allProductsButton)
+    const cartButton = button('Корзина', () => window.location.pathname = `cart`)
+    cartButton.classList.add(styles.allProductsButton)
+    buttonDiv.append(allProductsButton, cartButton)
 
-    header.append(buttonLogo, allProductsButton);
+    header.append(buttonLogo, buttonDiv);
     return header;
 };

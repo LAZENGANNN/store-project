@@ -1,6 +1,7 @@
 import styles from './productCard.module.css'
 import {button} from "./button";
-
+import {addToCart} from "../api/postToCart";
+import {removeFromCart} from "../api/DeletefromCart";
 
 export const productCard = product =>{
     const div = document.createElement('div')
@@ -27,16 +28,23 @@ export const productCard = product =>{
     // const category = document.createElement('p')
     // category.innerText = product.category
     const buttonDiv = document.createElement('div')
-
-
-
-    const buyButton = button('в корзину', null)
-    buyButton.classList.add(styles.buyButton)
     buttonDiv.classList.add(styles.buttonDiv)
+
+    if(window.location.pathname !== '/cart') {
+        //const buyButton = button('в корзину', () => addToCart('cart', {id: product.id}))
+        const buyButton = button('в корзину', () => addToCart('cart', product))
+        buyButton.classList.add(styles.buyButton)
+        buttonDiv.append(buyButton)
+    }
+    else{
+        const removeButton = button('убрать из корзины', () => removeFromCart('cart', product.id))
+        removeButton.classList.add(styles.buyButton)
+        buttonDiv.append(removeButton)
+    }
 
     const showButton = button('посмотреть', ()=> window.location.pathname = `product/${product.id}`)
     showButton.classList.add(styles.buyButton)
-    buttonDiv.append(buyButton, showButton)
+    buttonDiv.append(showButton)
 
 
     div.append(title,imgDiv,price,buttonDiv)

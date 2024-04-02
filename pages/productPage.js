@@ -1,4 +1,4 @@
-import {getProducts} from "../api/getProducts";
+import {GET} from "../api/GET";
 import styles from './productPage.module.css'
 import {button} from "../components/button";
 
@@ -85,7 +85,7 @@ const createProductPage = (product) =>{
 
 export const getProductPage = (id) =>{
     const div = document.createElement('div')
-    getProducts(`products?id=${id}`)
+    GET(`products?id=${id}`)
         .then(
             data =>data.data.map(product => div.append(createProductPage(product)))
         )
