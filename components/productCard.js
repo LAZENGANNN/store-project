@@ -37,7 +37,7 @@ export const productCard = product =>{
         buttonDiv.append(buyButton)
     }
     else{
-        const removeButton = button('убрать из корзины', () => removeFromCart('cart', product.id))
+        const removeButton = button('убрать из корзины', () => {removeFromCart('cart', product.id); window.location.reload()})
         removeButton.classList.add(styles.buyButton)
         buttonDiv.append(removeButton)
     }
