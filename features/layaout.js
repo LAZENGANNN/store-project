@@ -1,9 +1,6 @@
 import {homePage} from "../pages/homePage";
-import {allProductsPage} from "../pages/allProductsPage";
-import {categoryPage} from "../pages/categotyPage";
 import {getProductPage} from "../pages/productPage";
-import {getCartPage} from "../pages/cartPage";
-
+import {getAnyProductPage} from "../pages/anyProductsPage";
 
 const slicePathname = (pathname, number) =>{
     const arr = pathname.split('/')
@@ -24,16 +21,16 @@ export const getLayout = () => {
         div.append(homePage());
     }
     else if (prePathname === 'products') {
-        div.append(allProductsPage());
+        div.append(getAnyProductPage(prePathname, null));
     }
     else if (prePathname === 'category') {
-        div.append(categoryPage(pastPathname));
+        div.append(getAnyProductPage(prePathname, pastPathname));
+    }
+    else if (prePathname === 'cart'){
+        div.append(getAnyProductPage(prePathname, null))
     }
     else if (prePathname === 'product'){
         div.append(getProductPage(pastPathname));
-    }
-    else if (prePathname === 'cart'){
-        div.append(getCartPage());
     }
     else {
         // Обработка неизвестного пути
