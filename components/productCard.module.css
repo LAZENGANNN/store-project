@@ -1,3 +1,5 @@
+@import "../variables.css";
+
 .container{
     border: 1px solid black;
     background:#96ffff;
@@ -41,7 +43,7 @@
 }
 
 .buyButton{
-    background: aquamarine;
+    background:  var(--main-button-color);
     border-radius: 10px;
     border: none;
     font-size: x-large;
@@ -58,6 +60,10 @@
     flex-direction: column;
     justify-content: flex-end;
     flex-grow: 1;
+}
+
+.buttonDiv button{
+    border: 1px solid black;
 }
 
 /*id:1,*/

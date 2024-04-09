@@ -7,10 +7,44 @@ import styles from "./footerStyle.module.css"
 
 
 export const getFooter = () =>{
-    const footer = document.createElement('footer')
+    const footer = document.createElement('footer');
     footer.classList.add(styles.footer)
-    footer.innerText = 'footer'
+    const div1 = document.createElement('div');
+    div1.classList.add(styles.div)
+    const license = document.createElement('ul')
+    license.innerText = 'Digital Store'
+    const copyright = document.createElement('li')
+    copyright.innerText = '2024 ©'
+    license.append(copyright)
+    div1. append(license)
+
+    const div2 = document.createElement('div');
+    div2.classList.add(styles.div)
+    const support = document.createElement('ul')
+    support.innerText = 'Контакты'
+    const tgLi = document.createElement('li')
+    const tg = document.createElement('a')
+    tg.innerText = 'Telegram'
+    tg.setAttribute('href', `https://t.me/LAZENGANN`)
+    tg.classList.add(styles.tg)
+    tgLi.append(tg)
+    const gmailLi = document.createElement('li')
+    const gmail = document.createElement('a')
+    gmail.innerText = 'Gmail'
+    gmail.setAttribute('href', `https://t.me/LAZENGANN`)
+    gmail.classList.add(styles.gmail)
+    gmailLi.append(gmail)
+    support.append(tgLi, gmailLi)
+    div2. append(support)
+
+    const div3 = document.createElement('div');
 
 
+    const div4 = document.createElement('div');
+
+
+
+
+    footer.append(div1, div2)
     return footer
 }
