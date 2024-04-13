@@ -26,13 +26,14 @@ export const getFooter = () =>{
     const tg = document.createElement('a')
     tg.innerText = 'Telegram'
     tg.setAttribute('href', `https://t.me/LAZENGANN`)
-    tg.classList.add(styles.tg)
+    tgLi.classList.add(styles.tg)
     tgLi.append(tg)
+
     const gmailLi = document.createElement('li')
     const gmail = document.createElement('a')
     gmail.innerText = 'Gmail'
     gmail.setAttribute('href', `https://t.me/LAZENGANN`)
-    gmail.classList.add(styles.gmail)
+    gmailLi.classList.add(styles.gmail)
     gmailLi.append(gmail)
     support.append(tgLi, gmailLi)
     div2. append(support)

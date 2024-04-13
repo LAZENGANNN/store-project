@@ -1,4 +1,4 @@
-@import "../variables.css";
+@import "../../variables.css";
 
 .container{
     border: 1px solid black;
@@ -10,10 +10,21 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+
 }
 .img:hover{
     transform: scale(2.5);
+    animation: grow 500ms;
     
+}
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(2.5);
+    }
 }
 
 .imgDiv{
@@ -65,6 +76,8 @@
 .buttonDiv button{
     border: 1px solid black;
 }
+
+
 
 /*id:1,*/
 /*title:'...',*/

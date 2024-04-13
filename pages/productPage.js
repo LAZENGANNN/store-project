@@ -1,7 +1,8 @@
 import {GET} from "../api/GET";
 import styles from './productPage.module.css'
 import {button} from "../components/button";
-
+import {addToCart} from "../api/postToCart";
+import {sendOrder} from "../api/postOrder";
 
 const createProductPage = (product) =>{
     const div = document.createElement('div')
@@ -14,10 +15,13 @@ const createProductPage = (product) =>{
     img.classList.add(styles.img)
 
     const buttonDiv = document.createElement('div')
-    const buyButton = button('в корзину', null)
+    const cartButton = button('в корзину', () => addToCart(product))
+    cartButton.classList.add(styles.buyButton)
+    const buyButton = button('купить', ()=> sendOrder(product))
     buyButton.classList.add(styles.buyButton)
     buttonDiv.classList.add(styles.buttonDiv)
-    buttonDiv.append(buyButton)
+    buttonDiv.append(cartButton, buyButton)
+
     imgDiv.append(img, buttonDiv)
 
 

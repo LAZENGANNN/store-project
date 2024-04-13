@@ -1,5 +1,5 @@
 import styles from './categoryCard.module.css'
-import {button} from "./button";
+import {button} from "../button";
 
 
 
