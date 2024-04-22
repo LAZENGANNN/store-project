@@ -1,6 +1,12 @@
+.container{
+
+}
+
+
 .categoriesDiv{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 30px;
 }

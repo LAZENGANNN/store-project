@@ -1,11 +1,10 @@
 import styles from './categoryCard.module.css'
-import {button} from "./button";
+import {button} from "../button";
 
 
 
 export const categoryCard = category =>{
-    const btn  = button(null, ()=> window.location.pathname = `${category}`)
-    btn.classList.add('categoryCard')
+    const btn  = button(null, ()=> window.location.pathname = `category/${category.name}`)
     btn.classList.add(styles.container)
     
     

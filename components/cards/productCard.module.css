@@ -1,0 +1,87 @@
+@import "../../variables.css";
+
+.container{
+    border: 1px solid black;
+    background:#96ffff;
+    font-family: "Anta", sans-serif;
+    font-size: large;
+    margin: 20px 20px 20px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+.img:hover{
+    transform: scale(2.5);
+    animation: grow 500ms;
+    
+}
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(2.5);
+    }
+}
+
+.imgDiv{
+    max-width: 100%;
+    max-height: 150px;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+
+.img{
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+    align-self: center;
+}
+
+
+.title{
+
+}
+
+.price{
+    color: firebrick;
+    font-size: xx-large;
+}
+
+.buyButton{
+    background:  var(--main-button-color);
+    border-radius: 10px;
+    border: none;
+    font-size: x-large;
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding: 10px;
+}
+.buyButton:active{
+    background-color: dodgerblue;
+}
+
+.buttonDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.buttonDiv button{
+    border: 1px solid black;
+}
+
+
+
+/*id:1,*/
+/*title:'...',*/
+/*price:'...',*/
+/*category:'...',*/
+/*description:'...',*/
+/*image:'...'*/

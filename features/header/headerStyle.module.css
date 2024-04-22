@@ -1,0 +1,67 @@
+
+.header {
+    width: 100%;
+    max-width: 1440px;
+    height: 100px;
+    background: linear-gradient(#84FFFF, #D1FFFF);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid darkblue;
+    position: fixed;
+}
+
+.buttonLogo{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    min-width: 200px;
+    align-items: center;
+    font: 40px "Fira Sans", sans-serif;
+    color: blue;
+    background: none;
+    border: none;
+}
+
+.logoDiv{
+    max-width: 90px;
+    max-height: 100%;
+}
+
+.logo{
+    max-width: 90px;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.allProductsButton{
+    background: aquamarine;
+    border-radius: 10px;
+    border: none;
+    font-size: x-large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+.allProductsButton:active{
+    background-color: dodgerblue;
+}
+
+.buttonDiv{
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+/*.homeButton{*/
+/*    border: 2px solid darkgray;*/
+/*    max-width: fit-content;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+

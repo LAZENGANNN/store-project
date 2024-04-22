@@ -1,0 +1,35 @@
+
+.footer{
+    height: 150px;
+    background: linear-gradient(var(--gradient-down), var(--gradient-top));
+    border: 2px solid darkblue;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.div1{
+    border-radius: 10px;
+
+}
+
+.div ul li {
+    list-style-type: none;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: normal;
+}
+
+.div ul{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.tg{
+    list-style-image: url('../images/telegram.png');
+}
+
+.gmail{
+    list-style-image: url('../images/gmail.png');
+}

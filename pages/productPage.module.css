@@ -1,0 +1,107 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    padding-top: 150px;
+}
+
+
+.imgDiv{
+    max-width: 700px;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.img{
+    object-fit: contain;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.descDiv{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+
+
+.title{
+    font-size: xxx-large;
+    font-weight: bolder;
+    border-top: 2px solid #84FFFF;
+}
+
+.desc{
+    font-size: x-large;
+    border-top: 3px solid #84FFFF;
+}
+
+.catLink{
+    font-size: x-large;
+    border-top: 3px solid #84FFFF;
+}
+
+.catLink a {
+    text-decoration: none;
+}
+
+.blocksDiv{
+    font-size: x-large;
+    display: flex;
+    justify-content: space-around;
+    border-top: 3px solid #84FFFF;
+}
+
+.rate{
+    color: goldenrod;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #84FFFF;
+    padding: 5px;
+    border-radius: 10px;
+    width: 130px;
+}
+
+.count{
+    color: darkblue;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #84FFFF;
+    padding: 5px;
+    border-radius: 10px;
+    width: 130px;
+}
+
+.price{
+    color: firebrick;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #84FFFF;
+    padding: 5px;
+    border-radius: 10px;
+    width: 130px;
+}
+
+.buyButton{
+    background: aquamarine;
+    border-radius: 10px;
+    border: none;
+    font-size: x-large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.buttonDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.buyButton:active{
+    background-color: dodgerblue;
+}

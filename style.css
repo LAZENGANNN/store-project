@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Yanone+Kaffeesatz:wght@400..700&display=swap');
+
+
+* {
+    /*border: 1px solid black;*/
+    /*font-family: "Anta", sans-serif;*/
+    font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .app{
-  width: 1440px;
-  margin-left: 240px  ;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    background-color:  #D1FFFF;
+
 }
