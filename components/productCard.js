@@ -6,7 +6,8 @@ import {removeFromCart} from "../api/DeletefromCart";
 export const productCard = product =>{
     const div = document.createElement('div')
     div.classList.add(styles.container)
-
+    const id = product.id
+    div.setAttribute('id', id)
 
     const title = document.createElement('p')
     title.innerText = product.title
@@ -37,7 +38,14 @@ export const productCard = product =>{
         buttonDiv.append(buyButton)
     }
     else{
-        const removeButton = button('убрать из корзины', () => {removeFromCart('cart', product.id); window.location.reload()})
+        const removeButton = button('убрать из корзины', () => {
+            removeFromCart('cart', product.id)
+                .then((res) => {
+                    const removeItem = document.getElementById(res.data.id)
+                    const productContainer = document.getElementById('container')
+                    productContainer.removeChild(removeItem)
+                })
+        })
         removeButton.classList.add(styles.buyButton)
         buttonDiv.append(removeButton)
     }
