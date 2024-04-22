@@ -1,7 +1,8 @@
 import styles from './productCard.module.css'
-import {button} from "./button";
-import {addToCart} from "../api/postToCart";
-import {removeFromCart} from "../api/DeletefromCart";
+import {button} from "../button";
+import {addToCart} from "../../api/postToCart";
+import {removeFromCart} from "../../api/DeletefromCart";
+
 
 export const productCard = product =>{
     const div = document.createElement('div')
@@ -33,7 +34,10 @@ export const productCard = product =>{
 
     if(window.location.pathname !== '/cart') {
         //const buyButton = button('в корзину', () => addToCart('cart', {id: product.id}))
-        const buyButton = button('в корзину', () => addToCart('cart', product))
+        const buyButton = button('в корзину', () =>
+        {
+            addToCart(product);
+        })
         buyButton.classList.add(styles.buyButton)
         buttonDiv.append(buyButton)
     }

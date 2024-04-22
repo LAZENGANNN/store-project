@@ -1,12 +1,12 @@
-import {categoryCard} from "../components/categoryCard";
+import {categoryCard} from "../components/cards/categoryCard";
 import {getCategories} from "../api/getCategories";
-import {getDailyCard} from "../components/dailyProductCard";
+import {getDailyCard} from "../components/cards/dailyProductCard";
 import styles from './homePage.module.css'
+import './page.css'
 
 export const homePage = () => {
     const div = document.createElement('div');
-    div.classList.add(styles.container)
-
+    div.classList.add(styles.container, 'page')
     div.append(getDailyCard())
 
 

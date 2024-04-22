@@ -16,7 +16,7 @@
 
 .div ul li {
     list-style-type: none;
-    font-size: medium;
+    font-size: 20px;
     margin: 10px;
     font-weight: normal;
 }
@@ -27,5 +27,9 @@
 }
 
 .tg{
-    /*list-style-image: url();*/
+    list-style-image: url('../images/telegram.png');
+}
+
+.gmail{
+    list-style-image: url('../images/gmail.png');
 }

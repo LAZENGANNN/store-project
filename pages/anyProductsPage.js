@@ -1,13 +1,15 @@
 import {GET} from "../api/GET";
-import {productCard} from "../components/productCard";
+import {productCard} from "../components/cards/productCard";
 import styles from './anyProductsPage.module.css'
+import './page.css'
 
 
 
 export const getAnyProductPage = (type, pastPathname) =>{
     console.log(type)
     const div = document.createElement('div')
-    div.classList.add(styles.container)
+    div.classList.add(styles.container, 'page')
+
     // GET('products')
     //     .then(
     //         data =>data.data.map(product => div.append(productCard(product)))
