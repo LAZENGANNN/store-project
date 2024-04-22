@@ -1,0 +1,42 @@
+
+.container{
+    width: 400px;
+    height: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--gradient-top);
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+
+/*.visible{*/
+/*    animation: toVisible 1000ms;*/
+/*}*/
+
+
+/*.hidden{*/
+/*    animation: toHidden 1000ms;*/
+/*}*/
+
+/*@keyframes toVisible {*/
+/*    from {*/
+/*        visibility: hidden;*/
+/*    }*/
+
+/*    to {*/
+/*        visibility: visible;*/
+/*    }*/
+/*}*/
+
+/*@keyframes toHidden {*/
+/*    from {*/
+/*        visibility: visible;*/
+/*    }*/
+
+/*    to {*/
+/*        visibility: hidden;*/
+/*    }*/
+/*}*/

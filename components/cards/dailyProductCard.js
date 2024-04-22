@@ -47,7 +47,7 @@ export const getDailyCard = () =>{
     const date = new Date();
     let day = date.getDate()
     if (date.getDate() > 20){
-        day = day + 20
+        day = 20
     }
     console.log(day)
 

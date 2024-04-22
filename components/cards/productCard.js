@@ -2,9 +2,12 @@ import styles from './productCard.module.css'
 import {button} from "../button";
 import {addToCart} from "../../api/postToCart";
 import {removeFromCart} from "../../api/DeletefromCart";
+import {showNotification} from "../../features/notification/notification.js";
 
 
 export const productCard = product =>{
+
+
     const div = document.createElement('div')
     div.classList.add(styles.container)
     const id = product.id
@@ -37,6 +40,7 @@ export const productCard = product =>{
         const buyButton = button('в корзину', () =>
         {
             addToCart(product);
+            showNotification(`продукт ${product.title} добавлен в корзину`);
         })
         buyButton.classList.add(styles.buyButton)
         buttonDiv.append(buyButton)
@@ -49,6 +53,7 @@ export const productCard = product =>{
                     const productContainer = document.getElementById('container')
                     productContainer.removeChild(removeItem)
                 })
+            showNotification(`продукт ${product.title} убран из корзины`);
         })
         removeButton.classList.add(styles.buyButton)
         buttonDiv.append(removeButton)

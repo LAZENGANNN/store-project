@@ -16,6 +16,6 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0;
-    background-color:  #D1FFFF;
+    background-color: var(--gradient-down);
 
 }
