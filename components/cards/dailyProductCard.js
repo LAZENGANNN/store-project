@@ -2,6 +2,7 @@ import {GET} from "../../api/GET";
 import styles from './dailyProduct.module.css'
 import {button} from "../button";
 import {addToCart} from "../../api/postToCart";
+import {showNotification} from "../../features/notification/notification";
 
 const createDailyCard = (product) => {
     const div = document.createElement('div')
@@ -29,7 +30,10 @@ const createDailyCard = (product) => {
 
     const buttonDiv = document.createElement('div')
     buttonDiv.classList.add(styles.buttonDiv)
-    const buyButton = button('в корзину', () => addToCart(product))
+    const buyButton = button('в корзину', () => {
+        addToCart(product)
+        showNotification(`продукт ${product.title} добавлен в корзину`);
+    })
     buyButton.classList.add(styles.buyButton)
     buttonDiv.append(buyButton)
     const showButton = button('посмотреть', ()=> window.location.pathname = `product/${product.id}`)

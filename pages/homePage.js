@@ -1,8 +1,8 @@
 import {categoryCard} from "../components/cards/categoryCard";
-import {getCategories} from "../api/getCategories";
 import {getDailyCard} from "../components/cards/dailyProductCard";
 import styles from './homePage.module.css'
 import './page.css'
+import {GET} from "../api/GET";
 
 export const homePage = () => {
     const div = document.createElement('div');
@@ -13,7 +13,7 @@ export const homePage = () => {
     const categoriesDiv = document.createElement('div')
     categoriesDiv.classList.add(styles.categoriesDiv)
 
-    getCategories('categories')
+    GET('categories')
         .then(
             data => data.data.map(category => categoriesDiv.append(categoryCard(category)))
         )

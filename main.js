@@ -10,7 +10,9 @@ import {getNotification} from "./features/notification/notification.js";
 const app = document.querySelector('#app');
 
 app.classList.add('app');
+
+
 app.append(getHeader());
 app.append(getLayout());
-app.append(getNotification())
-app.append(getFooter())
+app.append(getNotification());
+app.append(getFooter());

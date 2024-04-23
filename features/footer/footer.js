@@ -29,13 +29,13 @@ export const getFooter = () =>{
     tgLi.classList.add(styles.tg)
     tgLi.append(tg)
 
-    const gmailLi = document.createElement('li')
-    const gmail = document.createElement('a')
-    gmail.innerText = 'Gmail'
-    gmail.setAttribute('href', `https://t.me/LAZENGANN`)
-    gmailLi.classList.add(styles.gmail)
-    gmailLi.append(gmail)
-    support.append(tgLi, gmailLi)
+    const discordLi = document.createElement('li')
+    const discord = document.createElement('a')
+    discord.innerText = 'Discord'
+    discord.setAttribute('href', `https://discord.com/invite/bjdY3yqM`)
+    discordLi.classList.add(styles.gmail)
+    discordLi.append(discord)
+    support.append(tgLi, discordLi)
     div2. append(support)
 
     const div3 = document.createElement('div');

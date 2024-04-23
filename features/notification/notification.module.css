@@ -1,12 +1,17 @@
 
 .container{
-    width: 400px;
-    height: 200px;
+    max-width: 400px;
     position: fixed;
     left: 0;
     top: 0;
     background: var(--gradient-top);
     visibility: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 240px;
+    font-size: 30px;
+    padding: 10px;
+    color: var(--accept-green);
 }
 .show{
     visibility: visible;
