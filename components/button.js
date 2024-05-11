@@ -1,4 +1,3 @@
-import './buttonsStyles.css'
 
 export const button = (text, callBack) => {
     const btn = document.createElement('button');
