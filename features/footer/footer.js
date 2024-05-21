@@ -32,7 +32,7 @@ export const getFooter = () =>{
     const discordLi = document.createElement('li')
     const discord = document.createElement('a')
     discord.innerText = 'Discord'
-    discord.setAttribute('href', `https://discord.com/invite/bjdY3yqM`)
+    discord.setAttribute('href', `https://discordapp.com/users/681165613535592451/`)
     discordLi.classList.add(styles.gmail)
     discordLi.append(discord)
     support.append(tgLi, discordLi)

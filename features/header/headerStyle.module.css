@@ -26,6 +26,10 @@
     border: none;
 }
 
+.name{
+    font-size: 40px;
+}
+
 .logoDiv{
     max-width: 90px;
     max-height: 100%;

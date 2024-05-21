@@ -12,17 +12,22 @@ export const getHeader = () => {
     const logo = getLogo()
     logo.classList.add(styles.logo)
 
+    const h1 = document.createElement('h1');
     const name = document.createElement('p');
+    h1.append(name)
     name.innerText = 'Digital Store'
-    buttonLogo.append(logo, name)
+    name.classList.add(styles.name)
+    buttonLogo.append(logo, h1)
 
     const buttonDiv = document.createElement('div')
     buttonDiv.classList.add(styles.buttonDiv)
-    // buttonDiv.setAttribute('id', 'myPopup')
+
     const allProductsButton = button('Все продукты', () => window.location.pathname = 'products')
     allProductsButton.classList.add(styles.allProductsButton)
+
     const cartButton = button('Корзина', () => window.location.pathname = `cart`)
     cartButton.classList.add(styles.allProductsButton)
+
     buttonDiv.append(allProductsButton, cartButton)
     header.append(buttonLogo, buttonDiv);
     return header;

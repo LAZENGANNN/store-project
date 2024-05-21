@@ -1,0 +1,67 @@
+
+
+
+.vars{
+    --startMargin: 100%;
+    --endMargin: 22%;
+}
+
+
+.container{
+    width: 1440px;
+    height: 500px;
+    position: fixed;
+    background-image: url("../images/ADcasinoBanner.png");
+    margin-top: 100%;
+    z-index: 1;
+}
+
+
+
+.mainButton{
+    background: none;
+    width: 1440px;
+    height: 500px;
+}
+
+.startAnimation{
+    animation: appearance 4000ms;
+}
+.setEndMargin{
+    margin-top: 22%;
+}
+
+.showed{
+    display: none;
+}
+
+.cancelDiv{
+    width: 25px;
+    height: 25px;
+    background: none;
+    border-radius: 50%;
+
+
+}
+.cancelButton {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url('../images/cancel.png');
+    margin-left: 90%;
+
+}
+@keyframes appearance{
+    0%{
+        /*margin-top: var(--startMargin);*/
+    }
+    100%{
+        margin-top: 22%;
+    }
+}
+
+@media (max-width: 1399px){
+    .container{
+        display: none;
+    }
+}
