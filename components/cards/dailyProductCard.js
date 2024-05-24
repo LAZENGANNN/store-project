@@ -30,9 +30,9 @@ const createDailyCard = (product) => {
 
     const buttonDiv = document.createElement('div')
     buttonDiv.classList.add(styles.buttonDiv)
-    const buyButton = button('в корзину', () => {
+    const buyButton = button('Сохранить', () => {
         addToCart(product)
-        showNotification(`продукт ${product.title} добавлен в корзину`);
+        showNotification(`продукт ${product.title} Сохранён`);
     })
     buyButton.classList.add(styles.buyButton)
     buttonDiv.append(buyButton)
@@ -53,7 +53,7 @@ export const getDailyCard = () =>{
     if (date.getDate() > 20){
         day = 20
     }
-    console.log(day)
+
 
     const div = document.createElement('div')
 

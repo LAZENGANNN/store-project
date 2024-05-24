@@ -16,7 +16,7 @@ export const getLayout = () => {
     const prePathname = slicePathname(pathname, 1)
     const pastPathname = slicePathname(pathname, 2)
 
-    console.log(prePathname, pastPathname)
+    // console.log(prePathname, pastPathname)
     if (pathname === '/') {
         div.append(homePage());
     }

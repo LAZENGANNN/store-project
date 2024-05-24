@@ -22,11 +22,11 @@ export const getHeader = () => {
     const buttonDiv = document.createElement('div')
     buttonDiv.classList.add(styles.buttonDiv)
 
-    const allProductsButton = button('Все продукты', () => window.location.pathname = 'products')
-    allProductsButton.classList.add(styles.allProductsButton)
+    const allProductsButton = button('Все товары', () => window.location.pathname = 'products')
+    allProductsButton.classList.add(styles.headerButton)
 
-    const cartButton = button('Корзина', () => window.location.pathname = `cart`)
-    cartButton.classList.add(styles.allProductsButton)
+    const cartButton = button('Сохранённое', () => window.location.pathname = `cart`)
+    cartButton.classList.add(styles.headerButton)
 
     buttonDiv.append(allProductsButton, cartButton)
     header.append(buttonLogo, buttonDiv);

@@ -10,7 +10,7 @@
 .container{
     width: 1440px;
     height: 500px;
-    position: fixed;
+    position: absolute;
     background-image: url("../images/ADcasinoBanner.png");
     margin-top: 100%;
     z-index: 1;
@@ -18,17 +18,17 @@
 
 
 
-.mainButton{
-    background: none;
-    width: 1440px;
-    height: 500px;
-}
+/*.mainButton{*/
+/*    background: none;*/
+/*    width: 1440px;*/
+/*    height: 500px;*/
+/*}*/
 
 .startAnimation{
     animation: appearance 4000ms;
 }
 .setEndMargin{
-    /*margin-top: 22%;*/
+    bottom: 0;
 }
 
 .showed{
@@ -53,10 +53,10 @@
 }
 @keyframes appearance{
     0%{
-        /*margin-top: var(--startMargin);*/
+        bottom: 3000px;
     }
     100%{
-        margin-top: 22%;
+        bottom: 0;
     }
 }
 

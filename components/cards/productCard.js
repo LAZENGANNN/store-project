@@ -37,7 +37,7 @@ export const productCard = product =>{
 
     if(window.location.pathname !== '/cart') {
         //const buyButton = button('в корзину', () => addToCart('cart', {id: product.id}))
-        const buyButton = button('в корзину', () =>
+        const buyButton = button('Сохранить', () =>
         {
             addToCart(product);
             showNotification(`продукт ${product.title} добавлен в корзину`);

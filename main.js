@@ -3,8 +3,7 @@ import {getHeader} from "./features/header/header";
 import {getLayout} from "./features/layaout";
 import {getFooter} from "./features/footer/footer";
 import {getNotification} from "./features/notification/notification.js";
-import {getBottomADBanner} from "./features/ad/ADBanner";
-
+import {getBottomADBanner} from "./features/AD/ADBanner.js";
 
 
 const app = document.querySelector('#app');

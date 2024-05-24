@@ -15,8 +15,8 @@ export const getBottomADBanner = () =>{
     div.classList.add(styles.container)
     div.classList.add(styles.startAnimation)
     setTimeout(()=> div.classList.add(styles.setEndMargin), 3999)
-    const mainButton = button(null, () => window.location = 'https://www.casino.org/games/free/')
-    mainButton.classList.add(styles.mainButton)
+    // const mainButton = button(null, () => window.location = 'https://www.casino.org/games/free/')
+    // mainButton.classList.add(styles.mainButton)
 
     const cancelDiv = document.createElement('div')
     cancelDiv.classList.add(styles.cancelDiv)
