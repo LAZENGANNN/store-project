@@ -16,7 +16,7 @@ const createProductPage = (product) =>{
     img.classList.add(styles.img)
 
     const buttonDiv = document.createElement('div')
-    const cartButton = button('в корзину', () => {
+    const cartButton = button('сохранить', () => {
         addToCart(product)
         showNotification(`продукт ${product.title} добавлен в корзину`);
     })
