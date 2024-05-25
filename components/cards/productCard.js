@@ -46,14 +46,14 @@ export const productCard = product =>{
         buttonDiv.append(buyButton)
     }
     else{
-        const removeButton = button('убрать из корзины', () => {
+        const removeButton = button('убрать из сохранённого', () => {
             removeFromCart('cart', product.id)
                 .then((res) => {
                     const removeItem = document.getElementById(res.data.id)
                     const productContainer = document.getElementById('container')
                     productContainer.removeChild(removeItem)
                 })
-            showNotification(`продукт ${product.title} убран из корзины`);
+            showNotification(`продукт ${product.title} убран из сохранённого`);
         })
         removeButton.classList.add(styles.buyButton)
         buttonDiv.append(removeButton)
