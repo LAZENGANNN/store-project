@@ -28,7 +28,13 @@ export const getHeader = () => {
     const cartButton = button('Сохранённое', () => window.location.pathname = `cart`)
     cartButton.classList.add(styles.headerButton)
 
+    const menuButton = button(null,null)
+    // const menuImg = document.createElement('img');
+    // menuImg.setAttribute('src', "../images/menu.png")
+    // menuButton.append(menuImg)
+    menuButton.classList.add(styles.menuButton)
+
     buttonDiv.append(allProductsButton, cartButton)
-    header.append(buttonLogo, buttonDiv);
+    header.append(buttonLogo, buttonDiv, menuButton);
     return header;
 };

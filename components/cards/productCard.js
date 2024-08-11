@@ -35,6 +35,10 @@ export const productCard = product =>{
     const buttonDiv = document.createElement('div')
     buttonDiv.classList.add(styles.buttonDiv)
 
+    const showButton = button('посмотреть', ()=> window.location.pathname = `product/${product.id}`)
+    showButton.classList.add(styles.buyButton)
+    buttonDiv.append(showButton)
+
     if(window.location.pathname !== '/cart') {
         //const buyButton = button('в корзину', () => addToCart('cart', {id: product.id}))
         const buyButton = button('Сохранить', () =>
@@ -42,7 +46,7 @@ export const productCard = product =>{
             addToCart(product);
             showNotification(`продукт ${product.title} добавлен в корзину`);
         })
-        buyButton.classList.add(styles.buyButton)
+        buyButton.classList.add(styles.buyButton, styles.saveButton)
         buttonDiv.append(buyButton)
     }
     else{
@@ -58,11 +62,6 @@ export const productCard = product =>{
         removeButton.classList.add(styles.buyButton)
         buttonDiv.append(removeButton)
     }
-
-    const showButton = button('посмотреть', ()=> window.location.pathname = `product/${product.id}`)
-    showButton.classList.add(styles.buyButton)
-    buttonDiv.append(showButton)
-
 
     div.append(title,imgDiv,price,buttonDiv)
     return div
